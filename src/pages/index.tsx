@@ -1,3 +1,8 @@
+import Navbar from '@/common/components/Navbar';
+import {
+  NavContentFooterLayout,
+  MainContent,
+} from '@/common/styles/Layouts/NavContentFooterLayout.style';
 import Head from 'next/head';
 import Image from 'next/image';
 
@@ -10,7 +15,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>sfsfsf</main>
+      <NavContentFooterLayout>
+        <Navbar />
+        <MainContent>
+          <div>main</div>
+        </MainContent>
+        <div>Footer</div>
+      </NavContentFooterLayout>
     </>
   );
 }
