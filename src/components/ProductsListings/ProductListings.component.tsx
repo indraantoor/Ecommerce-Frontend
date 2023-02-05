@@ -17,7 +17,17 @@ export const ProductListingsComponent = () => {
         className="headingContainer"
       >
         <h2>Man & Woman Fashion</h2>
-        {!isLoading && <p>({products.length} Results)</p>}
+        {!isLoading && (
+          <p>
+            (
+            {
+              products?.filter((product: any) =>
+                filterBySearchText(product, searchText)
+              ).length
+            }{' '}
+            Results)
+          </p>
+        )}
       </div>
 
       {isLoading ? (
