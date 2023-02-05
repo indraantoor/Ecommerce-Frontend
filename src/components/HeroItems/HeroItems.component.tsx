@@ -37,7 +37,7 @@ export const HeroItemsComponent = () => {
           display: 'grid',
           gridTemplateColumns: '1fr 1fr 3fr 1fr 1fr',
           gap: '20px',
-          padding: '10px 120px',
+          padding: '10px 10%',
           alignItems: 'center',
         }}
       >

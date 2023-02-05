@@ -2,7 +2,7 @@ import { useAppContext } from '@/state/context/app-context';
 import { useCategories } from './hooks/useCategories.hook';
 
 export const CategoryDropDownComponent = () => {
-  const { data: categoriesList } = useCategories();
+  const { data: categoriesList, isLoading } = useCategories();
   const context = useAppContext();
   const { changeCategory } = context;
 
@@ -12,10 +12,12 @@ export const CategoryDropDownComponent = () => {
       <select
         style={{
           width: '100%',
+          padding: '4px',
         }}
+        disabled={isLoading}
         onChange={(e) => changeCategory(e.target.value)}
       >
-        <option value="">All</option>
+        <option value="">{isLoading ? 'Loading...' : 'All'}</option>
         {categoriesList?.map((category: string) => {
           return (
             <option value={category} key={category}>
