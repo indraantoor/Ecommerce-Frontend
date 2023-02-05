@@ -27,17 +27,19 @@ export const CarouselComponent = () => {
   };
 
   return (
-    <div>
+    <div
+      style={{
+        width: '100%',
+      }}
+    >
       <div
         style={{
-          background: 'red',
           display: 'flex',
           justifyContent: 'center',
         }}
       >
         <div
           style={{
-            background: 'orange',
             width: '70%',
             display: 'flex',
             justifyContent: 'space-between',
@@ -57,7 +59,6 @@ export const CarouselComponent = () => {
           </div>
           <p
             style={{
-              background: 'blue',
               flexGrow: 1,
               textAlign: 'center',
               fontSize: '2rem',
@@ -88,8 +89,13 @@ export const CarouselComponent = () => {
       >
         <button
           style={{
-            padding: '7px 25px',
+            padding: '10px 25px',
             cursor: 'pointer',
+            background: 'rgb(41,40,39)',
+            color: 'white',
+            outline: 'none',
+            border: '1px solid rgba(0,0,0,0.1)',
+            borderRadius: '5px',
           }}
         >
           {buttonText[selectedIndex]}

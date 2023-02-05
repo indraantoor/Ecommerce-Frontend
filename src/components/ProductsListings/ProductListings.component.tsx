@@ -8,10 +8,15 @@ export const ProductListingsComponent = () => {
   const { data: products } = useProductsListings(category);
 
   return (
-    <div>
+    <div
+      style={{
+        marginTop: '40px',
+      }}
+    >
       <div
         style={{
           textAlign: 'center',
+          marginBottom: '50px',
         }}
       >
         <h2>Man & Woman Fashion</h2>
@@ -20,10 +25,9 @@ export const ProductListingsComponent = () => {
       <div
         style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, 18rem);',
+          gridTemplateColumns: 'repeat(auto-fill, 18rem)',
           justifyContent: 'space-between',
-          background: 'brown',
-          rowGap: '20px',
+          rowGap: '50px',
           padding: '0 120px',
         }}
       >

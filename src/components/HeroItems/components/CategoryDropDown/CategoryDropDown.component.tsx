@@ -9,7 +9,12 @@ export const CategoryDropDownComponent = () => {
   console.log('CATEGORIES', categoriesList);
   return (
     <div>
-      <select onChange={(e) => changeCategory(e.target.value)}>
+      <select
+        style={{
+          width: '100%',
+        }}
+        onChange={(e) => changeCategory(e.target.value)}
+      >
         <option value="">All</option>
         {categoriesList?.map((category: string) => {
           return (

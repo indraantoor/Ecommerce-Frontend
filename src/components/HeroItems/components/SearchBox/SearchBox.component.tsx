@@ -1,7 +1,7 @@
 import { useAppContext } from '@/state/context/app-context';
 import React, { useState } from 'react';
 
-function SearchBoxComponent() {
+export function SearchBoxComponent() {
   const [searchText, setSearchText] = useState('');
   const context = useAppContext();
   const { changeSearchText } = context;
@@ -55,5 +55,3 @@ function SearchBoxComponent() {
     </div>
   );
 }
-
-export default SearchBoxComponent;

@@ -3,6 +3,7 @@ import {
   NavContentFooterLayout,
   MainContent,
 } from '@/common/styles/Layouts/NavContentFooterLayout.style';
+import Hero from '@/components/Hero';
 import HeroItems from '@/components/HeroItems';
 import ProductListings from '@/components/ProductsListings';
 import Head from 'next/head';
@@ -25,7 +26,7 @@ export default function Home() {
       <NavContentFooterLayout>
         <Navbar />
         <MainContent>
-          <HeroItems />
+          <Hero />
           <ProductListings />
         </MainContent>
         <div>Footer</div>

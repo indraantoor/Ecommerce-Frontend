@@ -12,12 +12,13 @@ function ProductCardComponent({
       style={{
         background: 'white',
         cursor: 'pointer',
-        borderRadius: '2px',
+        borderRadius: '5px',
         padding: '23px',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         gap: '35px',
+        border: '1px solid rgba(0,0,0,0.1)',
         flexDirection: 'column',
         boxShadow: '0px 10px 15px -3px rgba(0,0,0,0.1)',
       }}

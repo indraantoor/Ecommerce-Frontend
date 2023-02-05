@@ -6,20 +6,43 @@ export const HeroItemsComponent = () => {
   return (
     <div
       style={{
-        background: 'yellow',
+        position: 'absolute',
+        top: 0,
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        gap: '10px',
+        flexDirection: 'column',
+        background: 'rgba(0,0,0,0.4)',
       }}
     >
+      <div
+        style={{
+          textAlign: 'center',
+          fontSize: '2rem',
+          color: 'white',
+        }}
+      >
+        <h2
+          style={{
+            padding: '10px',
+            margin: 0,
+          }}
+        >
+          Eflyer
+        </h2>
+      </div>
       <div
         style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr 3fr 1fr 1fr',
           gap: '20px',
           padding: '10px 120px',
+          alignItems: 'center',
         }}
       >
         <div
           style={{
-            background: 'purple',
             fontSize: '30px',
             color: 'white',
           }}
@@ -31,18 +54,10 @@ export const HeroItemsComponent = () => {
             }}
           />
         </div>
-        <div
-          style={{
-            background: 'purple',
-          }}
-        >
+        <div>
           <CategoryDropDown />
         </div>
-        <div
-          style={{
-            background: 'white',
-          }}
-        >
+        <div>
           <SearchBox />
         </div>
         <div
@@ -54,9 +69,8 @@ export const HeroItemsComponent = () => {
         </div>
         <div
           style={{
-            background: 'purple',
             display: 'flex',
-            justifyContent: 'space-between',
+            justifyContent: 'space-around',
             gap: '10px',
             color: 'white',
             alignItems: 'center',
@@ -91,7 +105,10 @@ export const HeroItemsComponent = () => {
       </div>
       <div
         style={{
-          background: 'pink',
+          // flexGrow: 1,
+          display: 'flex',
+          width: '100%',
+          alignItems: 'center',
         }}
       >
         <Carousel />

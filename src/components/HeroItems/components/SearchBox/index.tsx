@@ -1,4 +1,4 @@
-import SearchBoxComponent from './SearchBox.component';
+import { SearchBoxComponent } from './SearchBox.component';
 
 function SearchBox() {
   return <SearchBoxComponent />;

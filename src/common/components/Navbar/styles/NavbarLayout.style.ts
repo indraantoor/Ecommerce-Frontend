@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 
 export const NavbarContainer = styled.nav`
-  background-color: blue;
+  background-color: rgb(41, 40, 39);
   display: flex;
   justify-content: center;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
 
   ul {
-    background-color: orange;
     max-width: 900px;
     width: 100%;
     list-style: none;
@@ -18,16 +20,13 @@ export const NavbarContainer = styled.nav`
 
     li {
       cursor: pointer;
-      background-color: red;
-      padding: 5px;
+      padding: 10px 15px;
+      color: white;
+      transition: 0.3s ease-in all;
+    }
+
+    li:hover {
+      background-color: rgba(0, 0, 0, 0.4);
     }
   }
-
-  /* &:before {
-    transform: skew(20deg);
-    height: 45px;
-    width: 20px;
-    background-color: red;
-    content: '';
-  } */
 `;
