@@ -4,11 +4,11 @@ const NavbarComponent = ({ ...props }) => {
   return (
     <NavbarContainer>
       <ul>
-        <li>Best Sellers</li>
-        <li>Gift Ideas</li>
-        <li>New Releases</li>
-        <li>Today's Deals</li>
-        <li>Customer Service</li>
+        <li tabIndex={1}>Best Sellers</li>
+        <li tabIndex={2}>Gift Ideas</li>
+        <li tabIndex={3}>New Releases</li>
+        <li tabIndex={4}>Today's Deals</li>
+        <li tabIndex={5}>Customer Service</li>
       </ul>
     </NavbarContainer>
   );

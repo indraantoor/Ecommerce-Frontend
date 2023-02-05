@@ -3,7 +3,6 @@ import LoadingSpinner from '../LoadingSpinner';
 import ProductCard from '../ProductCard';
 import { useProductsListings } from './hooks/useProductsListings.hook';
 import { ProductListingsContainer } from './styles/ProductsListingsLayout.style';
-
 export const ProductListingsComponent = () => {
   const context = useAppContext();
   const { searchText, category } = context?.state;

@@ -53,6 +53,7 @@ export const CarouselComponent = () => {
               fontSize: '2rem',
               opacity: 0.8,
             }}
+            tabIndex={6}
             onClick={previousSlide}
           >
             <i className="bi bi-arrow-left-circle-fill" />
@@ -75,6 +76,7 @@ export const CarouselComponent = () => {
               cursor: 'pointer',
               opacity: 0.8,
             }}
+            tabIndex={8}
             onClick={nextSlide}
           >
             <i className="bi bi-arrow-right-circle-fill" />
@@ -97,6 +99,7 @@ export const CarouselComponent = () => {
             border: '1px solid rgba(0,0,0,0.1)',
             borderRadius: '5px',
           }}
+          tabIndex={7}
         >
           {buttonText[selectedIndex]}
         </button>
