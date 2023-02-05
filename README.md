@@ -5,7 +5,7 @@ Steps to run -
 
 ```bash
 1) npm install
-# or
+
 2) npm run dev
 ```
 
