@@ -1,7 +1,7 @@
 import Carousel from './components/Carousel';
 import CategoryDropDown from './components/CategoryDropDown';
 import SearchBox from './components/SearchBox';
-import { HeroItemsContainer } from './components/styles/HeroItemsLayout.style';
+import { HeroItemsContainer } from './styles/HeroItemsLayout.style';
 
 export const HeroItemsComponent = () => {
   return (
