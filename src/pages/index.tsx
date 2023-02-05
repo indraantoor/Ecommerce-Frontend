@@ -1,3 +1,4 @@
+import Footer from '@/common/components/Footer';
 import Navbar from '@/common/components/Navbar';
 import {
   NavContentFooterLayout,
@@ -29,7 +30,7 @@ export default function Home() {
           <Hero />
           <ProductListings />
         </MainContent>
-        <div>Footer</div>
+        <Footer />
       </NavContentFooterLayout>
     </>
   );

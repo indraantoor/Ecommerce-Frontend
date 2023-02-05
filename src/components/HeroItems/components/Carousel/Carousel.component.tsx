@@ -25,6 +25,15 @@ export const CarouselComponent = () => {
                 carouselText.length - 1
               )
             }
+            onKeyDown={(e) => {
+              if (e.key == 'Enter') {
+                previousSlide(
+                  selectedIndex,
+                  setSelectedIndex,
+                  carouselText.length - 1
+                );
+              }
+            }}
           >
             <i className="bi bi-arrow-left-circle-fill" />
           </div>
@@ -39,6 +48,15 @@ export const CarouselComponent = () => {
                 carouselText.length - 1
               )
             }
+            onKeyDown={(e) => {
+              if (e.key == 'Enter') {
+                nextSlide(
+                  selectedIndex,
+                  setSelectedIndex,
+                  carouselText.length - 1
+                );
+              }
+            }}
           >
             <i className="bi bi-arrow-right-circle-fill" />
           </div>

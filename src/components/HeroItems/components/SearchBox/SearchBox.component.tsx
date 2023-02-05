@@ -1,5 +1,5 @@
 import { useAppContext } from '@/state/context/app-context';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { SearchBoxContainer } from './styles/SearchBoxLayout.style';
 
 export function SearchBoxComponent() {
@@ -21,6 +21,11 @@ export function SearchBoxComponent() {
               return;
             }
             setSearchText(e.target.value);
+          }}
+          onKeyDown={(e) => {
+            if (e.key == 'Enter') {
+              changeSearchText(searchText);
+            }
           }}
         />
         <span>
