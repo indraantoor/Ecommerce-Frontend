@@ -1,4 +1,4 @@
-import { NavbarContainer } from '../styles/NavbarLayout.style';
+import { NavbarContainer } from './styles/NavbarLayout.style';
 
 const NavbarComponent = ({ ...props }) => {
   return (
