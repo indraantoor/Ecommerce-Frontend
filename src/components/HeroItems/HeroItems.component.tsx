@@ -14,6 +14,7 @@ export const HeroItemsComponent = () => {
         gap: '10px',
         flexDirection: 'column',
         background: 'rgba(0,0,0,0.4)',
+        overflow: 'hidden',
       }}
     >
       <div

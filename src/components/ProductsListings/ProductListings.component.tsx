@@ -2,6 +2,7 @@ import { useAppContext } from '@/state/context/app-context';
 import LoadingSpinner from '../LoadingSpinner';
 import ProductCard from '../ProductCard';
 import { useProductsListings } from './hooks/useProductsListings.hook';
+import { ProductListingsContainer } from './styles/ProductsListingsLayout.style';
 
 export const ProductListingsComponent = () => {
   const context = useAppContext();
@@ -9,49 +10,21 @@ export const ProductListingsComponent = () => {
   const { data: products, isLoading } = useProductsListings(category);
 
   return (
-    <div
-      style={{
-        marginTop: '40px',
-      }}
-    >
+    <ProductListingsContainer>
       <div
         style={{
-          textAlign: 'center',
           marginBottom: isLoading ? '5px' : '50px',
         }}
+        className="headingContainer"
       >
-        <h2
-          style={{
-            margin: 0,
-            padding: 0,
-          }}
-        >
-          Man & Woman Fashion
-        </h2>
-        {!isLoading && (
-          <p
-            style={{
-              margin: 0,
-              padding: 0,
-              marginTop: '8px',
-            }}
-          >
-            ({products.length} Results)
-          </p>
-        )}
+        <h2>Man & Woman Fashion</h2>
+        {!isLoading && <p>({products.length} Results)</p>}
       </div>
+
       {isLoading ? (
         <LoadingSpinner />
       ) : (
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, 18rem)',
-            justifyContent: 'space-between',
-            rowGap: '50px',
-            padding: '0 7%',
-          }}
-        >
+        <div className="listingsContainer">
           {products
             ?.filter((product: any) => filterBySearchText(product, searchText))
             ?.map((product: any) => {
@@ -66,7 +39,7 @@ export const ProductListingsComponent = () => {
             })}
         </div>
       )}
-    </div>
+    </ProductListingsContainer>
   );
 };
 
