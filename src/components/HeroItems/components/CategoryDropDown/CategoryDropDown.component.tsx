@@ -1,5 +1,6 @@
 import { useAppContext } from '@/state/context/app-context';
 import { useCategories } from './hooks/useCategories.hook';
+import { CategoryDropDownContainer } from './styles/CategoryDropDownLayout.style';
 
 export const CategoryDropDownComponent = () => {
   const { data: categoriesList, isLoading } = useCategories();
@@ -8,12 +9,8 @@ export const CategoryDropDownComponent = () => {
 
   console.log('CATEGORIES', categoriesList);
   return (
-    <div>
+    <CategoryDropDownContainer>
       <select
-        style={{
-          width: '100%',
-          padding: '4px',
-        }}
         disabled={isLoading}
         onChange={(e) => changeCategory(e.target.value)}
       >
@@ -26,6 +23,6 @@ export const CategoryDropDownComponent = () => {
           );
         })}
       </select>
-    </div>
+    </CategoryDropDownContainer>
   );
 };
