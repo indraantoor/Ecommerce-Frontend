@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { NavbarContainer } from './styles/NavbarLayout.style';
 
-const NavbarComponent = ({ ...props }) => {
+const NavbarComponent = () => {
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
 
   return (
@@ -21,16 +21,7 @@ const NavbarComponent = ({ ...props }) => {
       </ul>
 
       {isBurgerMenuOpen ? (
-        <div
-          style={{
-            background: 'rgba(255,255,255,0.98)',
-            position: 'fixed',
-            marginTop: '60px',
-            height: '100%',
-            width: '100%',
-          }}
-          className="burger-menu-full-screen"
-        >
+        <div className="burger-menu-full-screen">
           <ul className="burger-menu">
             <li tabIndex={1}>Best Sellers</li>
             <li tabIndex={2}>Gift Ideas</li>

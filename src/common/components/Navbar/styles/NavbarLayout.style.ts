@@ -14,6 +14,11 @@ export const NavbarContainer = styled.nav`
 
   .burger-menu-full-screen {
     display: none;
+    background: rgba(255, 255, 255, 0.98);
+    position: fixed;
+    margin-top: 60px;
+    height: 100%;
+    width: 100%;
   }
 
   ul {
