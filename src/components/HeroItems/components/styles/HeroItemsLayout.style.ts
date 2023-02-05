@@ -67,4 +67,22 @@ export const HeroItemsContainer = styled.div`
     width: 100%;
     align-items: center;
   }
+
+  @media screen and (max-width: 595px) {
+    .topItemsWrapper {
+      grid-template-columns: 1fr 2fr 0.5fr;
+    }
+    .burger-menu,
+    .right-icon-items-container,
+    .carousel-container {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .topItemsWrapper {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 `;

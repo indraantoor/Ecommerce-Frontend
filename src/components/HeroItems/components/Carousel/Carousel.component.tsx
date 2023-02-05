@@ -10,22 +10,6 @@ export const CarouselComponent = () => {
   ];
   const buttonText = ['Buy Now', 'View More', 'Explore All'];
 
-  const nextSlide = () => {
-    if (selectedIndex < carouselText.length - 1) {
-      setSelectedIndex(selectedIndex + 1);
-      return;
-    }
-    setSelectedIndex(0);
-  };
-
-  const previousSlide = () => {
-    if (selectedIndex > 0) {
-      setSelectedIndex(selectedIndex - 1);
-      return;
-    }
-    setSelectedIndex(carouselText.length - 1);
-  };
-
   return (
     <div
       style={{
@@ -54,7 +38,13 @@ export const CarouselComponent = () => {
               opacity: 0.8,
             }}
             tabIndex={6}
-            onClick={previousSlide}
+            onClick={() =>
+              previousSlide(
+                selectedIndex,
+                setSelectedIndex,
+                carouselText.length - 1
+              )
+            }
           >
             <i className="bi bi-arrow-left-circle-fill" />
           </div>
@@ -77,7 +67,13 @@ export const CarouselComponent = () => {
               opacity: 0.8,
             }}
             tabIndex={8}
-            onClick={nextSlide}
+            onClick={() =>
+              nextSlide(
+                selectedIndex,
+                setSelectedIndex,
+                carouselText.length - 1
+              )
+            }
           >
             <i className="bi bi-arrow-right-circle-fill" />
           </div>
@@ -107,3 +103,27 @@ export const CarouselComponent = () => {
     </div>
   );
 };
+
+function nextSlide(
+  selectedIndex: number,
+  setSelectedIndex: Function,
+  carouselTextLength: number
+) {
+  if (selectedIndex < carouselTextLength) {
+    setSelectedIndex(selectedIndex + 1);
+    return;
+  }
+  setSelectedIndex(0);
+}
+
+function previousSlide(
+  selectedIndex: number,
+  setSelectedIndex: Function,
+  carouselTextLength: number
+) {
+  if (selectedIndex > 0) {
+    setSelectedIndex(selectedIndex - 1);
+    return;
+  }
+  setSelectedIndex(carouselTextLength);
+}

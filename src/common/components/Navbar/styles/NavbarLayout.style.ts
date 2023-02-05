@@ -8,6 +8,14 @@ export const NavbarContainer = styled.nav`
   width: 100%;
   z-index: 2;
 
+  .mobile {
+    display: none;
+  }
+
+  .burger-menu-full-screen {
+    display: none;
+  }
+
   ul {
     max-width: 900px;
     width: 100%;
@@ -27,6 +35,46 @@ export const NavbarContainer = styled.nav`
 
     li:hover {
       background-color: rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  .burger-menu {
+    font-size: 25px;
+    flex-direction: column;
+    padding-top: 20px;
+
+    li {
+      color: black;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    li:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .icon-item {
+      display: flex;
+      gap: 10px;
+    }
+  }
+
+  @media screen and (max-width: 595px) {
+    .desktop {
+      display: none;
+    }
+
+    .mobile {
+      display: flex;
+    }
+
+    .burger-menu-full-screen {
+      display: block;
+    }
+
+    ul {
+      font-size: 35px;
+      padding: 0;
+      justify-content: flex-end;
     }
   }
 `;

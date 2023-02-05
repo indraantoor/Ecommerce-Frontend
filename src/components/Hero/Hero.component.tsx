@@ -1,30 +1,19 @@
 import Image from 'next/image';
 import HeroItems from '../HeroItems';
+import { HeroContainer } from './styles/HeroLayout.style';
 
 export const HeroComponent = () => {
   return (
-    <div
-      style={{
-        position: 'relative',
-      }}
-    >
-      <div
-        style={{
-          position: 'relative',
-          height: 0,
-          padding: '19.4%',
-        }}
-      >
+    <HeroContainer>
+      <div className="image-container">
         <Image
           src={'/Images/heroImg.jpg'}
           fill
           alt="hero image"
-          style={{
-            objectFit: 'cover',
-          }}
+          className="image"
         />
       </div>
       <HeroItems />
-    </div>
+    </HeroContainer>
   );
 };
