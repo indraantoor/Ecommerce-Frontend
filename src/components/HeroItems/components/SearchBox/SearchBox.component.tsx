@@ -1,5 +1,6 @@
 import { useAppContext } from '@/state/context/app-context';
 import React, { useState } from 'react';
+import { SearchBoxContainer } from './styles/SearchBoxLayout.style';
 
 export function SearchBoxComponent() {
   const [searchText, setSearchText] = useState('');
@@ -7,25 +8,13 @@ export function SearchBoxComponent() {
   const { changeSearchText } = context;
 
   return (
-    <div>
-      <div
-        style={{
-          display: 'flex',
-          borderRadius: '2px',
-          border: '1px solid rgba(0,0,0,0.1)',
-        }}
-      >
+    <SearchBoxContainer>
+      <div className="wrapper">
         <input
           type="text"
           id="searchBox"
           name="searchText"
           placeholder="Search this blog"
-          style={{
-            flexGrow: 1,
-            outline: 'none',
-            border: 'none',
-            padding: '6px 15px',
-          }}
           onChange={(e) => {
             if (!e.target.value) {
               changeSearchText('');
@@ -35,23 +24,11 @@ export function SearchBoxComponent() {
           }}
         />
         <span>
-          <button
-            style={{
-              padding: '6px 10px',
-              background: 'orange',
-              border: 'none',
-              outline: 'none',
-              color: 'white',
-              cursor: 'pointer',
-              borderTopRightRadius: '2px',
-              borderBottomRightRadius: '2px',
-            }}
-            onClick={() => changeSearchText(searchText)}
-          >
+          <button onClick={() => changeSearchText(searchText)}>
             <i className="bi bi-search" />
           </button>
         </span>
       </div>
-    </div>
+    </SearchBoxContainer>
   );
 }
