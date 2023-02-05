@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { CarouselContainer } from './styles/CarouselLayout.style';
 
 export const CarouselComponent = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -11,32 +12,11 @@ export const CarouselComponent = () => {
   const buttonText = ['Buy Now', 'View More', 'Explore All'];
 
   return (
-    <div
-      style={{
-        width: '100%',
-      }}
-    >
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-        }}
-      >
-        <div
-          style={{
-            width: '70%',
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            gap: '15px',
-          }}
-        >
+    <CarouselContainer>
+      <div className="carousel-items">
+        <div className="carousel-wrapper">
           <div
-            style={{
-              color: 'white',
-              fontSize: '2rem',
-              opacity: 0.8,
-            }}
+            className="arrow-container"
             tabIndex={6}
             onClick={() =>
               previousSlide(
@@ -48,24 +28,9 @@ export const CarouselComponent = () => {
           >
             <i className="bi bi-arrow-left-circle-fill" />
           </div>
-          <p
-            style={{
-              flexGrow: 1,
-              textAlign: 'center',
-              fontSize: '2rem',
-              cursor: 'pointer',
-              color: 'white',
-            }}
-          >
-            {carouselText[selectedIndex]}
-          </p>
+          <p>{carouselText[selectedIndex]}</p>
           <div
-            style={{
-              color: 'white',
-              fontSize: '2rem',
-              cursor: 'pointer',
-              opacity: 0.8,
-            }}
+            className="arrow-container"
             tabIndex={8}
             onClick={() =>
               nextSlide(
@@ -79,28 +44,10 @@ export const CarouselComponent = () => {
           </div>
         </div>
       </div>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-        }}
-      >
-        <button
-          style={{
-            padding: '10px 25px',
-            cursor: 'pointer',
-            background: 'rgb(41,40,39)',
-            color: 'white',
-            outline: 'none',
-            border: '1px solid rgba(0,0,0,0.1)',
-            borderRadius: '5px',
-          }}
-          tabIndex={7}
-        >
-          {buttonText[selectedIndex]}
-        </button>
+      <div className="button-container">
+        <button tabIndex={7}>{buttonText[selectedIndex]}</button>
       </div>
-    </div>
+    </CarouselContainer>
   );
 };
 
