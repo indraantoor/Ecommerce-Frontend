@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { IProductCardComponentPropsTypes } from './core/interfaces/ProductCardProps.interface';
+import { ProductCardContainer } from './styles/ProductCardLayout.style';
 
 function ProductCardComponent({
   title = '',
@@ -8,65 +9,18 @@ function ProductCardComponent({
   currency = '$',
 }: IProductCardComponentPropsTypes) {
   return (
-    <div
-      style={{
-        background: 'white',
-        cursor: 'pointer',
-        borderRadius: '5px',
-        padding: '23px',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        gap: '35px',
-        border: '1px solid rgba(0,0,0,0.1)',
-        flexDirection: 'column',
-        boxShadow: '0px 10px 15px -3px rgba(0,0,0,0.1)',
-      }}
-    >
-      <div
-        style={{
-          textAlign: 'center',
-          fontSize: '20px',
-          width: '100%',
-        }}
-      >
+    <ProductCardContainer>
+      <div className="product-information">
         <div>{title}</div>
-        <div
-          style={{
-            fontSize: '16px',
-            marginTop: '15px',
-          }}
-        >
-          <span
-            style={{
-              color: 'orange',
-              marginRight: '5px',
-            }}
-          >
-            Price
-          </span>
+        <div className="price-container">
+          <span className="price">Price</span>
           {`${currency} ${price}`}
         </div>
       </div>
-      <div
-        style={{
-          flexGrow: 1,
-          position: 'relative',
-          padding: '35%',
-          height: 0,
-          width: 0,
-        }}
-      >
-        <Image
-          src={imageSrc}
-          fill
-          alt="product-image"
-          style={{
-            objectFit: 'contain',
-          }}
-        />
+      <div className="image-container">
+        <Image src={imageSrc} fill alt="product-image" className="image" />
       </div>
-    </div>
+    </ProductCardContainer>
   );
 }
 
