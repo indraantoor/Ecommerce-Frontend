@@ -48,7 +48,7 @@ function SearchBoxComponent() {
             }}
             onClick={() => changeSearchText(searchText)}
           >
-            IC
+            <i className="bi bi-search" />
           </button>
         </span>
       </div>

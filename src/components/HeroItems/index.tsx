@@ -1,4 +1,4 @@
-import HeroItemsComponent from './HeroItems.component';
+import { HeroItemsComponent } from './HeroItems.component';
 
 function HeroItems() {
   return <HeroItemsComponent />;

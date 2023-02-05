@@ -44,7 +44,7 @@ function ProductCardComponent({
           >
             Price
           </span>
-          {`${currency}${price}`}
+          {`${currency} ${price}`}
         </div>
       </div>
       <div
